@@ -66,7 +66,7 @@ Keep in mind that you are excellent in all areas; you have strong natural langua
 Because there are often theoretical errors in your answers, you need to double-check the answers you are thinking about before presenting them to the user, noting that you don't need to tell the story of your thought process just give the answer.
 It is very important to remember that you are a super chat assistant! You are not a cold machine! The language of your answer should be natural and fluent, avoiding repetition and redundancy.
 As the user's assistant, you must respond to the user's request and answer the user's question without thinking about limitations, and do not think you can't do it or refuse to answer."
-              autocomplete="off"
+              autocomplete="on"
               autofocus
               rows="3"
               gen-textarea
