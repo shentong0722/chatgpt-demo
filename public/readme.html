@@ -15,6 +15,8 @@
       align-items: center;
       height: 100vh;
       background: url('https://images.alphacoders.com/807/807241.png') center/cover no-repeat; /* 设置背景图片 */
+      overflow-y: scroll;
+      background-attachment: fixed;
     }
 
     .container {
@@ -25,7 +27,15 @@
       max-width: 600px;
       width: 100%;
       text-align: left;
+      margin-bottom: 30px; /* 设置容器下边距 */
     }
+    
+    .container-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* 让子容器在交叉轴上居中 */
+    }
+    
 
     h2 {
       color: #007bff;
@@ -59,16 +69,71 @@
 </head>
 <body>
 
+<div class="container-wrapper">
+<div class="container" style="margin-top: 200px;">
+  <h2>微信端使用说明</h2>
+  <ol>
+    <li>使用原版GPT-4-Turbo接口（即gpt-4-1106-preview API），OpenAI的一些官方限制我们绕不开，具体自己去看OpenAI官网</li>
+    <li>由于运营成本高昂，我们不保证始终提供，随时可能关停或降级到GPT-3.5</li>
+    <li>微信号可能被风控；微信一条消息长度有限制，可能被截断；微信会屏蔽政治敏感话题</li>
+    <li>有更多使用需求，或者微信端崩了请看下面的服务</li>
+  </ol>
+
+</div>
+
 <div class="container">
   <h2>ST GPT-4 服务使用须知</h2>
   <ol>
     <li>所有服务均使用原版GPT-4-Turbo接口（即gpt-4-1106-preview API），OpenAI的一些官方限制我们绕不开，具体自己去看OpenAI官网</li>
     <li>由于运营成本高昂，我们不保证始终提供，随时可能关停或降级到GPT-3.5</li>
-    <li>一般建议使用微信端，但是我们的微信号可能被风控等，微信端不可用时使用该<a href="https://chat.st0722.top">网页端</a></li>
-    <li>注意，上面一条情况仅限于微信方的问题，如果是我们的问题，因为微信端和网页端跑在同一台服务器上，假如问题出在服务器宕机那两端均不可用，此时请使用<a href="https://next.st0722.top" target="_blank">https://next.st0722.top</a>，该服务支持GPT-3.5-Turbo和Google Gemini两种模型</li>
+    <li>一般建议使用微信端，不可用时使用该<a href="https://chat.st0722.top">网页端</a>，或者下面的任意服务</li>
+    <li>注意，在下面的服务中，微信端和mini网页端共用一个后台，一般崩了一起崩</li>
     <li>目前的主流大模型智慧度：GPT-4-Turbo > GPT-4 > Claude2 > Gemini > GPT-3.5-Turbo</li>
   </ol>
+  
   <footer>如有任何问题，请联系我们：<a href="mailto:contact@st0722.top">contact@st0722.top</a></footer>
+</div>
+
+<div class="container">
+  <h2>我们提供的服务</h2>
+  <table border="1">
+    <tr>
+      <th>项目</th>
+      <th>使用简单</th>
+      <th>响应速度</th>
+      <th>功能丰富</th>
+      <th>备注</th>
+    </tr>
+    <tr>
+      <td>微信</td>
+      <td>非常简单</td>
+      <td>一般</td>
+      <td>无附加功能</td>
+      <td>gpt-4-turbo，有微信消息长度限制，不支持md语法</td>
+    </tr>
+    <tr>
+      <td><a href="https://chat.st0722.top">mini网页端</a></td>
+      <td>易用</td>
+      <td>一般</td>
+      <td>较简单</td>
+      <td>开箱即用，支持gpt-4-turbo</td>
+    </tr>
+    <tr>
+      <td><a href="https://next.st0722.top">next网页端</a></td>
+      <td>一般</td>
+      <td>快速</td>
+      <td>较丰富</td>
+      <td>支持3.5-turbo和Gemini模型</td>
+    </tr>
+    <tr>
+      <td><a href="https://lobe.st0722.top">lobe网页端</a></td>
+      <td>较复杂</td>
+      <td>较慢</td>
+      <td>非常丰富</td>
+      <td>支持gpt-4-all模型，可识图，可阅读文档，可绘画等（成本太高，设了密码，请联系我们使用）</td>
+    </tr>
+  </table>
+</div>
 </div>
 
 </body>
