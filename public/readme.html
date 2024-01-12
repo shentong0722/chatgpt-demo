@@ -1,140 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="https://analyse.st0722.top/script.js" data-website-id="53389952-5c56-4ce0-a417-17b9600b9f74"></script>
-  <title>ST GPT-4 服务使用须知</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: url('https://images.alphacoders.com/807/807241.png') center/cover no-repeat; /* 设置背景图片 */
-      overflow-y: scroll;
-      background-attachment: fixed;
-    }
-
-    .container {
-      background-color: rgba(255, 255, 255, 0.7); /* 设置容器背景颜色和透明度 */
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 100%;
-      text-align: left;
-      margin-bottom: 30px; /* 设置容器下边距 */
-    }
-    
-    .container-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* 让子容器在交叉轴上居中 */
-    }
-    
-
-    h2 {
-      color: #007bff;
-      text-align: center; /* 设置标题居中 */
-      font-weight: bold; /* 设置标题加粗 */
-    }
-
-    ol {
-      padding-left: 20px;
-    }
-
-    p {
-      margin: 10px 0;
-    }
-
-    footer {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Markdown Display</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
-<div class="container-wrapper">
-<div class="container" style="margin-top: 200px;">
-  <h2>微信端使用说明</h2>
-  <ol>
-    <li>使用原版GPT-4-Turbo接口（即gpt-4-1106-preview API），OpenAI的一些官方限制我们绕不开，具体自己去看OpenAI官网</li>
-    <li>由于运营成本高昂，我们不保证始终提供，随时可能关停或降级到GPT-3.5</li>
-    <li>微信号可能被风控；微信一条消息长度有限制，可能被截断；微信会屏蔽政治敏感话题</li>
-    <li>有更多使用需求，或者微信端崩了请看下面的服务</li>
-  </ol>
-
+<div id="markdown-content">
+    <!-- Markdown内容将被转换并放置到这里 -->
 </div>
 
-<div class="container">
-  <h2>ST GPT-4 服务使用须知</h2>
-  <ol>
-    <li>所有服务均使用原版GPT-4-Turbo接口（即gpt-4-1106-preview API），OpenAI的一些官方限制我们绕不开，具体自己去看OpenAI官网</li>
-    <li>由于运营成本高昂，我们不保证始终提供，随时可能关停或降级到GPT-3.5，有重度使用需求的可以找我们购买一个私有key，自己使用</li>
-    <li>一般建议使用微信端，不可用时使用该<a href="https://chat.st0722.top">网页端</a>，或者下面的任意服务</li>
-    <li>注意，在下面的服务中，微信端和mini网页端共用一个后台，一般崩了一起崩</li>
-    <li>目前的主流大模型智慧度：GPT-4-Turbo > GPT-4 > Claude2 > Gemini > GPT-3.5-Turbo</li>
-  </ol>
-  
-  <footer>如有任何问题，请联系我们：<a href="mailto:contact@st0722.top">contact@st0722.top</a></footer>
-</div>
-
-<div class="container">
-  <h2>我们提供的服务</h2>
-  <table border="1">
-    <tr>
-      <th>项目</th>
-      <th>使用简单</th>
-      <th>响应速度</th>
-      <th>功能丰富</th>
-      <th>备注</th>
-    </tr>
-    <tr>
-      <td>微信</td>
-      <td>非常简单</td>
-      <td>一般</td>
-      <td>无附加功能</td>
-      <td>gpt-4-turbo，有微信消息长度限制，不支持md语法</td>
-    </tr>
-    <tr>
-      <td><a href="https://chat.st0722.top" target="_blank">mini网页端</a></td>
-      <td>易用</td>
-      <td>一般</td>
-      <td>较简单</td>
-      <td>开箱即用，支持gpt-4-turbo</td>
-    </tr>
-    <tr>
-      <td><a href="https://next.st0722.top" target="_blank">next网页端</a></td>
-      <td>一般</td>
-      <td>快速</td>
-      <td>较丰富</td>
-      <td>支持3.5-turbo和Gemini模型</td>
-    </tr>
-    <tr>
-      <td><a href="https://lobe.st0722.top" target="_blank">lobe网页端</a></td>
-      <td>较复杂</td>
-      <td>较慢</td>
-      <td>非常丰富</td>
-      <td>支持gpt-4-all模型，可识图，可阅读文档，可绘画等（成本太高，设了密码，请联系我们使用）</td>
-    </tr>
-  </table>
-</div>
-</div>
+<script>
+    // 步骤2和3: 加载并转换Markdown文件
+    fetch('./README.md')
+        .then(response => response.text())
+        .then(text => {
+            // 使用marked.js转换Markdown文本
+            const html = marked(text);
+            // 步骤4: 将转换后的HTML显示在网页中
+            document.getElementById('markdown-content').innerHTML = html;
+        })
+        .catch(err => console.error(err));
+</script>
 
 </body>
 </html>
