@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Markdown Display</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown to HTML</title>
+  <!-- 正确引入 Marked.js 库 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+  <!-- 创建一个容器用于显示转换后的 HTML -->
+  <div id="markdown-container"></div>
 
-<div id="markdown-content">
-    <!-- Markdown内容将被转换并放置到这里 -->
-</div>
+  <script>
+    // 等待DOM加载完成
+    document.addEventListener('DOMContentLoaded', function () {
+      // 使用 Marked.js 将 Markdown 转换为 HTML
+      const markdownContent = `
+# 您的Markdown内容在这里
+**这是粗体文本**
+*这是斜体文本*
+      `;
 
-<script>
-    // 步骤2和3: 加载并转换Markdown文件
-    fetch('./README.md')
-        .then(response => response.text())
-        .then(text => {
-            // 使用marked.js转换Markdown文本
-            const html = marked(text);
-            // 步骤4: 将转换后的HTML显示在网页中
-            document.getElementById('markdown-content').innerHTML = html;
-        })
-        .catch(err => console.error(err));
-</script>
+      // 获取容器元素
+      const container = document.getElementById('markdown-container');
 
+      // 将 Markdown 转换为 HTML 并插入容器
+      const htmlContent = marked(markdownContent);
+
+      // 将转换后的 HTML 插入容器
+      container.innerHTML = htmlContent;
+    });
+  </script>
 </body>
 </html>
 
