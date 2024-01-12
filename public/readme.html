@@ -1,36 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markdown to HTML</title>
-  <!-- 正确引入 Marked.js 库 -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://analyse.st0722.top/script.js" data-website-id="53389952-5c56-4ce0-a417-17b9600b9f74"></script>
+    <title>ST GPT使用说明</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background: url('https://i.postimg.cc/nLq55fBb/pikachu-white.png') center/cover no-repeat;
+            background-attachment: fixed;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <!-- 创建一个容器用于显示转换后的 HTML -->
-  <div id="markdown-container"></div>
 
-  <script>
-    // 等待DOM加载完成
-    document.addEventListener('DOMContentLoaded', function () {
-      // 使用 Marked.js 将 Markdown 转换为 HTML
-      const markdownContent = `
-# 您的Markdown内容在这里
-**这是粗体文本**
-*这是斜体文本*
-      `;
+    <h1>微信端使用说明</h1>
+    <ol>
+        <li>使用原版GPT-4-Turbo接口（即gpt-4-1106-preview API），OpenAI的一些官方限制我们绕不开，具体自己去看OpenAI官网</li>
+        <li>由于运营成本高昂，我们不保证始终提供，随时可能关停或降级到GPT-3.5</li>
+        <li>微信号可能被风控；微信一条消息长度有限制，可能被截断；微信会屏蔽政治敏感话题</li>
+        <li>有更多使用需求，或者微信端崩了请看下面的服务</li>
+    </ol>
 
-      // 获取容器元素
-      const container = document.getElementById('markdown-container');
+    <h1>ST GPT-4 服务使用须知</h1>
+    <ol>
+        <li>所有服务均使用原版GPT-4-Turbo接口（即gpt-4-1106-preview API），OpenAI的一些官方限制我们绕不开，具体自己去看OpenAI官网</li>
+        <li>由于运营成本高昂，我们不保证始终提供，随时可能关停或降级到GPT-3.5，有重度使用需求的可以找我们购买一个私有key，自己使用</li>
+        <li>一般建议使用微信端，不可用时使用该<a href="https://chat.st0722.top">网页端</a>，或者下面的任意服务</li>
+        <li>注意，在下面的服务中，微信端和next网页端共用一个后台，一般崩了一起崩（所以next网页端我们还内置了Google Gemini模型备用</li>
+        <li>目前的主流大模型智慧度：GPT-4-Turbo &gt; GPT-4 &gt; Claude2 &gt; Gemini &gt; GPT-3.5-Turbo</li>
+    </ol>
 
-      // 将 Markdown 转换为 HTML 并插入容器
-      const htmlContent = marked(markdownContent);
+    <h1>我们提供的服务</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>项目</th>
+                <th>使用简单</th>
+                <th>响应速度</th>
+                <th>功能丰富</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>微信</td>
+                <td>非常简单</td>
+                <td>一般</td>
+                <td>无附加功能</td>
+                <td>gpt-4-turbo，有微信消息长度限制，不支持md语法</td>
+            </tr>
+            <tr>
+                <td><a href="https://chat.st0722.top">mini网页端</a></td>
+                <td>易用</td>
+                <td>一般</td>
+                <td>较简单</td>
+                <td>开箱即用，支持gpt-3.5-turbo</td>
+            </tr>
+            <tr>
+                <td><a href="https://next.st0722.top">next网页端</a></td>
+                <td>一般</td>
+                <td>快速</td>
+                <td>较丰富</td>
+                <td>支持gpt-4-turbo和Gemini模型</td>
+            </tr>
+            <tr>
+                <td><a href="https://lobe.st0722.top">lobe网页端</a></td>
+                <td>较复杂</td>
+                <td>较慢</td>
+                <td>非常丰富</td>
+                <td>支持gpt-4-all模型，可识图，可阅读文档，可绘画等（成本太高，设了密码，请联系我们使用）</td>
+            </tr>
+        </tbody>
+    </table>
 
-      // 将转换后的 HTML 插入容器
-      container.innerHTML = htmlContent;
-    });
-  </script>
+    <p>如有任何问题，请联系我们：<a href="mailto:contact@st0722.top">contact@st0722.top</a></p>
+
 </body>
 </html>
 
