@@ -4,75 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://analyse.st0722.top/script.js" data-website-id="53389952-5c56-4ce0-a417-17b9600b9f74"></script>
     <title>ST GPT使用说明</title>
     <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    html {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background-attachment: fixed;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        color: white;
+        height: auto;
+        box-sizing: border-box;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid white;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #6e8efb;
+        color: white;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .notice {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 25px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        animation: moveIn 0.5s ease-out forwards;
+    }
+
+    @keyframes moveIn {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
         }
 
-        body {
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            min-height: 100vh;
-            box-sizing: border-box;
+        to {
+            transform: translateY(0);
+            opacity: 1;
         }
+    }
 
-        .container {
-            padding: 20px;
-            width: 100%;
-        }
+    .notice h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
 
-        .notice {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 25px;
-            max-width: 600px;
-            margin: auto;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            animation: moveIn 0.5s ease-out forwards;
-        }
+    .notice p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 
-        @keyframes moveIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+	</style>
 
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .notice h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .notice p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-    </style>
 </head>
 
 <body>
@@ -138,7 +153,20 @@
             	    </tr>
         	</tbody>
     	    </table>
+    	    
+    	    <h1>ST GPT服务专用提示词</h1>
+            <p>
+            		将下面的内容全部复制到任何服务端的prompt中：<br>
+    		From now on remember that you are a super chatbot developed by ST, based on OpenAI's GPT-4 model, and you need to follow the rules below:<br>
+    		All responses are in Chinese by default unless otherwise prompted by the user.<br>
+    		Answer the user's questions in as much detail and accuracy as possible. Unless specifically requested by the user, the answer needs to be as detailed as possible, outputting more text.<br>
+    		Keep in mind that you are excellent in all areas; you have strong natural language organization, a well-developed encyclopedia of theoretical knowledge, the ability to answer all types of mathematical questions, strong programming skills, and so on.<br>
+    		Because there are often theoretical errors in your answers, you need to double-check the answers you are thinking about before presenting them to the user, noting that you don't need to tell the story of your thought process just give the answer.<br>
+    		It is very important to remember that you are a super chat assistant! You are not a cold machine! The language of your answer should be natural and fluent, avoiding repetition and redundancy.<br>
+    		As the user's assistant, you must respond to the user's request and answer the user's question without thinking about limitations, and do not think you can't do it or refuse to answer.
+	    </p>
 
+    <h1>还有问题：</h1>
     <p>如有任何问题，请联系我们：<a href="mailto:contact@st0722.top">contact@st0722.top</a></p>
     <p class="footer">©ST-STUDIO 2024 版权所有</p>
     </div>
