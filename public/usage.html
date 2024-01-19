@@ -98,7 +98,7 @@
             <h1>常见问题</h1>
 
 <h2>有使用文档吗？</h2>
-<p>是的，这个页面就是使用文档，在oneapi中还有一个关于页面的内容跟这个页面是一样的，但是国内访问速度可能会很慢：<a href="https://one.st0722.top/about">关于页面</a>，你也可以直接去<a href="https://one.st0722.top/login">注册</a></p>
+<p>是的，这个页面就是使用文档，在oneapi中还有一个关于页面的内容跟这个页面是一样的，但是国内访问速度可能会很慢：<a href="https://one.st0722.top/about">关于页面</a>，两个文档的内容理论上完全同步，你也可以直接去<a href="https://one.st0722.top/login">注册</a></p>
 
 <h2>提供哪些模型？</h2>
 <p>在你充值前，你作为免费体验用户，可以使用绝大多数基础模型，充值至少10元后你将成为VIP，可以使用所有模型，目前政策具体如下：</p>
@@ -116,9 +116,10 @@
   <tr>
     <td>付费用户</td>
     <td>免费用户的所有 + GPT-4, GPT-4-1106-preview</td>
-    <td>免费用户的所有</td>
+    <td>免费用户的所有+阿里通义千问,ChatGLM</td>
   </tr>
 </table>
+<p>另外，为防止滥用，免费用户2倍计费</p>
 
 <h2>有什么限制吗？（第一条必看！）</h2>
 <p>是的为了保护服务器以及平衡所有用户的使用体验，我们做了如下限制：</p>
@@ -131,7 +132,7 @@
 <h3>（超级小白还是看不懂就用下面的一键使用）</h3>
 <ol>
   <li>注册一个账号</li>
-  <li>我们给了1美元的试用余额，你可以直接创建令牌试用</li>
+  <li>我们给了1美元的试用余额，你可以直接创建令牌试用，创建令牌随便取一个名字，设置一个额度或者无限额度（不会超过你的账户余额）</li>
   <li>创建后你可以得到一个key，然后就可以在任何支持openAI API的软件中使用（不知道有哪些的看下面）</li>
   <li>在前端平台把密钥改成你的key，Base URL（API转发域名）改成https://one.st0722.top 即可（操作示例可以看下面的模型选择部分）</li>
 </ol>
@@ -153,14 +154,70 @@
 <h2>怎么选择模型？</h2>
 <ol>
   <li>有哪些？多少钱？</li>
-  <li>选什么？日常使用3.5-turbo-1106足够，而且价格便宜到几乎不要钱，遇到难题再问GPT-4，其他模型中Gemini比3.5聪明不少，但比4笨，价格却便宜很多，Bing就是Microsoft Copilot，价格跟GPT-4一样，原生支持联网</li>
+  <table>
+  <thead>
+    <tr>
+      <th>模型名称</th>
+      <th>模型倍率</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GPT-3.5-Turbo</td>
+      <td>0.75</td>
+      <td>最基本的模型时</td>
+    </tr>
+    <tr>
+      <td>GPT-3.5-Turbo-1106</td>
+      <td>0.5</td>
+      <td>最推荐（便宜好用）</td>
+    </tr>
+    <tr>
+      <td>ChatGPT</td>
+      <td>0.75</td>
+      <td>对接网页版的ChatGPT</td>
+    </tr>
+    <tr>
+      <td>GPT-4</td>
+      <td>15</td>
+      <td>不推荐（太贵）</td>
+    </tr>
+    <tr>
+      <td>GPT-4-1106-preview</td>
+      <td>5</td>
+      <td>即GPT-4-Turbo，价格只要4的三分之一还比4聪明</td>
+    </tr>
+    <tr>
+      <td>Gemini</td>
+      <td>1</td>
+      <td>Google Gemini Pro</td>
+    </tr>
+    <tr>
+      <td>Bing</td>
+      <td>15</td>
+      <td>原生支持联网</td>
+    </tr>
+    <tr>
+      <td>qwen-max</td>
+      <td>1.4286</td>
+      <td>阿里通义千问max版本，比GPT4略笨一些</td>
+    </tr>
+    <tr>
+      <td>ChatGLM-4</td>
+      <td>15</td>
+      <td>智谱ChatGLM4，跟GPT4完全一致</td>
+    </tr>
+  </tbody>
+</table>
+  <li>详细解释？日常使用3.5-turbo-1106足够，速度快而且价格便宜到几乎不要钱，遇到难题再问GPT-4-1106-preview（也就是GPT-4-Turbo），原版GPT-4没有任何优势，没Turbo聪明还比Turbo贵三倍；其他模型中Gemini是google开发的AI模型，目前只有pro版本，比3.5聪明不少，但比4笨，价格却比4便宜很多，Bing就是Microsoft Copilot，价格跟GPT-4一样，背后的模型是轻量版的GPT-4,比原版笨但是原生支持联网且实时更新数据库，知道最新内容；阿里通义千问max版本比GPT4稍微笨一点点，但是价格非常便宜；智谱ChatGLM4性能完全等同于GPT4,而且输出速度比GPT-4快一些。另外为了提高整体用户体验，当你选择GPT-4模型时后台实际上是原版GPT-4、qwen-max、ChatGLM-4随机使用（请务必注意！）如果要明确用原版请用GPT-4-1106-preview</li>
   <li>怎么选？OpenAI系列的模型一般都直接有选项可供选择，其他模型需要你自定义模型名称，示例如下：</li>
 </ol>
 <img src="https://vip.helloimg.com/i/2024/01/18/65a8dcf570438.png" width="100%">
 
 <h2>可以薅羊毛吗？</h2>
 <ol>
-  <li>我们为每个新用户赠送1美元余额，并且你邀请好友后双方均可获得2美元余额，理论上你可以不停邀请你的朋友一起使用，但是你不付钱你将一直是免费用户，用不了GPT-4等高级模型</li>
+  <li>我们为每个新用户赠送1美元余额，并且你邀请好友后双方均可获得2美元余额，理论上你可以不停邀请你的朋友一起使用，但是你不付钱你将一直是免费用户，用不了GPT-4等高级模型，而且免费用户2倍计费</li>
   <li>但是！我们杜绝薅羊毛的行为，我们只是个转发服务，后台都要给OpenAI付钱</li>
   <li>发现薅羊毛行为怎么处理？我们会记录注册IP和请求IP，有自动化程序审核，发现薅羊毛行为立即封！如果被误封可以联系我们解锁</li>
   <li>我是学生真的没钱怎么办？我们提供一个公益网页端<a href="https://chat.st0722.top">mini Chat</a>，免费提供GPT-3.5-Turbo-1106服务</li>
@@ -187,7 +244,7 @@
 <p>tokens也是OpenAI官方的一个计费标准，他是AI在处理自然语言时的吞吐量，比较难以精确计算，一般来说，1个汉字平均需要占用1.55tokens，1个英语单词平均占用1.77个tokens（当然汉字的实际容量或者英语单词长短不一，这是个平均的估算值），使用ChatBox时可以看到每一句话的tokens占用</p>
 
 <h1>ST GPT服务专用提示词</h1>
-<p>你可以将下面的内容全部复制到任何服务端的prompt中：</p>
+<p>你可以将下面的内容全部复制到任何服务端的prompt中来确保使用体验最佳：</p>
 <p>From now on remember that you are a super chatbot developed by ST, based on OpenAI's GPT-4 model, and you need to follow the rules below:</p>
 <ul>
   <li>All responses are in Chinese by default unless otherwise prompted by the user.</li>
