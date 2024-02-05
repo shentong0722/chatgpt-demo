@@ -3,7 +3,6 @@ import { useThrottleFn } from 'solidjs-use'
 import { generateSignature } from '@/utils/auth'
 import IconClear from './icons/Clear'
 import MessageItem from './MessageItem'
-import SystemRoleSettings from './SystemRoleSettings'
 import ErrorMessageItem from './ErrorMessageItem'
 import type { ChatMessage, ErrorMessage } from '@/types'
 
@@ -57,7 +56,7 @@ export default () => {
     isStick() ? localStorage.setItem('stickToBottom', 'stick') : localStorage.removeItem('stickToBottom')
   }
 
-  const handleButtonClick = async() => {
+  const handleButtonClick = async () => {
     const inputValue = inputRef.value
     if (!inputValue)
       return
@@ -82,7 +81,7 @@ export default () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'instant' })
   }
 
-  const requestWithLatestMessage = async() => {
+  const requestWithLatestMessage = async () => {
     setLoading(true)
     setCurrentAssistantMessage('')
     setCurrentError(null)
@@ -204,14 +203,6 @@ export default () => {
 
   return (
     <div my-6>
-      <SystemRoleSettings
-        canEdit={() => messageList().length === 0}
-        systemRoleEditing={systemRoleEditing}
-        setSystemRoleEditing={setSystemRoleEditing}
-        currentSystemRoleSettings={currentSystemRoleSettings}
-        setCurrentSystemRoleSettings={setCurrentSystemRoleSettings}
-        temperatureSetting={temperatureSetting}
-      />
       <Index each={messageList()}>
         {(message, index) => (
           <MessageItem
